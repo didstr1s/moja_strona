@@ -1,4 +1,4 @@
-<html>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -10,5 +10,20 @@
 <body>
     <h1>To jest strona druga</h1>
 </body>
+    
+    <button onclick="pokazSekcje()">Pokaż więcej</button>
+<div id="ukrytaSekcja" style="display: none;">
+  <h1> informatyka </h1>
+  <p>
+  bla bla ble
+</p>
+</div>
+<script>
+  function pokazSekcje() {
+    var sekcja = document.getElementById("ukrytaSekcja");
+    sekcja.style.display = "block";
+  }
+</script>
+    
 </html>
-</html>
+
