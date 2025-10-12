@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<style>
-   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 95vh;
-    background: url(zdjęcie.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-   }
-    </style>
-
 <head>
-    <meta name="Description" content="strona druga">
-    <meta name="Keywords" content="strona druga">
-    <meta charset="utf-8">
-    <title>strona pierwsza (główna)</title>
+  <meta charset="utf-8">
+  <meta name="description" content="strona druga">
+  <meta name="keywords" content="strona druga">
+  <title>Strona druga</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; /* przyciski pod sobą */
+      justify-content: center;
+      align-items: center;
+      min-height: 95vh;
+      background: url(zdjęcie.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Kody HTML </h1>
+  <button onclick="pokazSekcjeHTML()">Kody HTML</button>
+  <div id="ukrytaSekcja" style="display: none;">
+    <p>
+      <a href="index.html" target="_self" title="przenosi do strony 2">
+        Kody HTML
+      </a>
+    </p>
+  </div>
+
+  <button onclick="pokazSekcjePython()">Kody PYTHON</button>
+  <div id="ukrytaSekcja1" style="display: none;">
+    <h1>coś innego</h1>
+  </div>
+
+  <script>
+    function pokazSekcjeHTML() {
+      document.getElementById("ukrytaSekcja").style.display = "block";
+    }
+
+    function pokazSekcjePython() {
+      document.getElementById("ukrytaSekcja1").style.display = "block";
+    }
+  </script>
 </body>
-    
-    <button onclick="pokazSekcje()">Pokaż więcej</button>
-<div id="ukrytaSekcja" style="display: none;">
-  <h1> informatyka </h1>
-  <p>
-  bla bla ble
-</p>
-</div>
-<script>
-  function pokazSekcje() {
-    var sekcja = document.getElementById("ukrytaSekcja");
-    sekcja.style.display = "block";
-  }
-</script>
-    
 </html>
+
 
 
